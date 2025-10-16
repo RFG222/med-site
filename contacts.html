@@ -1,0 +1,94 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Контакты — Мёд с нашей пасеки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Центрируем форму и делаем её шире */
+        #order {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            box-sizing: border-box;
+            background: #fff9f0;
+            border-radius: 12px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+            #order iframe {
+                width: 100%;
+                min-height: 800px;
+                border: none;
+            }
+
+        /* Адаптивно для мобильных */
+        @media (max-width: 600px) {
+            #order {
+                margin: 20px 10px;
+                padding: 15px;
+            }
+
+                #order iframe {
+                    min-height: 600px;
+                }
+        }
+    </style>
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Главная</a>
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html" class="active">Контакты</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">☰</button>
+        </div>
+    </header>
+
+    <main class="container contacts-page">
+        <h1>Контакты</h1>
+
+        <div id="order">
+            <h3>Оставить заявку</h3>
+            <p>Оставьте свои данные в форме ниже — мы перезвоним и уточним детали заказа.</p>
+            <!-- Встроенная Google Форма -->
+            <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe_6qKiv-RSx6k1u8Ks1WRaG6wUzlsBIpOIaFotKOJRBc7Eyw/viewform?embedded=true">Загрузка…</iframe>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+                <p>с. Красноусольский, Республика Башкортостан</p>
+            </div>
+            <div class="footer-contacts">
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ med@pasika.ru</p>
+                <p>Instagram: @med_s_nashey_paseki</p>
+            </div>
+            <div class="footer-links">
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+        <div class="copyright">© <span id="yearContacts"></span> Мёд с нашей пасеки</div>
+    </footer>
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+        document.getElementById('yearContacts').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

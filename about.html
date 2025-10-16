@@ -1,0 +1,74 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>О нашей пасеке — Мёд с нашей пасеки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Главная</a>
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html" class="active">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">☰</button>
+        </div>
+    </header>
+
+    <main class="container about-page">
+        <h1>Наша семья и пасека</h1>
+        <div class="about-grid">
+            <div class="about-text">
+                <p>Пасека нашей семьи находится в селе Красноусольский, Республика Башкортостан. Мы занимаемся пчеловодством более 20 лет: бережно содержим ульи, заботимся о здоровье пчёл и собираем мёд с лугов и лесов Южного Урала.</p>
+                <p>Мы не используем искусственных подкормок и химии. При переработке мёда соблюдаем традиционные методы, чтобы сохранить максимум полезных свойств.</p>
+                <h3>Почему именно наш мёд?</h3>
+                <ul>
+                    <li>Башкирский регион — природно богат нектаром.</li>
+                    <li>Сбор ручной и аккуратный.</li>
+                    <li>Контроль качества на каждом этапе.</li>
+                    <li>Мы любим свою работу и хотим делиться вкусом и пользой мёда.</li>
+                </ul>
+            </div>
+            <div class="about-photos">
+                <img src="images/bees.jpg" alt="Пчёлы">
+                <img src="images/honey-jar.jpg" alt="Банки мёда">
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+                <p>с. Красноусольский, Республика Башкортостан</p>
+            </div>
+            <div class="footer-contacts">
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ med@pasika.ru</p>
+                <p>Instagram: @med_s_nashey_paseki</p>
+            </div>
+            <div class="footer-links">
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+        <div class="copyright">© <span id="yearAbout"></span> Мёд с нашей пасеки</div>
+    </footer>
+
+    <script>
+    document.getElementById('navToggle').addEventListener('click', function(){
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+    document.getElementById('yearAbout').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

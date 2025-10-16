@@ -1,0 +1,101 @@
+﻿<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Отзывы — Мёд с нашей пасеки</title>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+            <nav class="main-nav" id="mainNav">
+                <a href="index.html">Главная</a>
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html" class="active">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+            </nav>
+            <button class="nav-toggle" id="navToggle" aria-label="Открыть меню">☰</button>
+        </div>
+    </header>
+
+    <main class="container reviews-page">
+        <h1>Отзывы наших покупателей</h1>
+
+        <div class="reviews-list">
+            <blockquote class="review">
+                <p>“Пробовали много мёда, но ваш башкирский — самый ароматный! Берём только у вас.”</p>
+                <cite>— Марина, Уфа</cite>
+            </blockquote>
+
+            <blockquote class="review">
+                <p>“Доставка пришла быстро, мёд густой, ароматный, просто супер!”</p>
+                <cite>— Игорь, Москва</cite>
+            </blockquote>
+
+            <blockquote class="review">
+                <p>“Настоящий вкус детства. Теперь берём только у вас!”</p>
+                <cite>— Ольга, Казань</cite>
+            </blockquote>
+        </div>
+
+        <section class="add-review">
+            <h2>Оставить отзыв</h2>
+            <p>Можно написать отзыв — мы опубликуем после модерации.</p>
+            <form id="reviewForm">
+                <label>
+                    Имя
+                    <input type="text" name="name" required>
+                </label>
+                <label>
+                    Город
+                    <input type="text" name="city">
+                </label>
+                <label>
+                    Отзыв
+                    <textarea name="text" rows="4" required></textarea>
+                </label>
+                <button class="btn" type="submit">Отправить отзыв</button>
+            </form>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <a class="logo" href="index.html">Мёд с нашей пасеки</a>
+                <p>с. Красноусольский, Республика Башкортостан</p>
+            </div>
+            <div class="footer-contacts">
+                <p>📞 +7 (999) 123-45-67</p>
+                <p>✉️ med@pasika.ru</p>
+                <p>Instagram: @med_s_nashey_paseki</p>
+            </div>
+            <div class="footer-links">
+                <a href="products.html">Наш мёд</a>
+                <a href="about.html">О нас</a>
+                <a href="reviews.html">Отзывы</a>
+                <a href="contacts.html">Контакты</a>
+            </div>
+        </div>
+        <div class="copyright">© <span id="yearReviews"></span> Мёд с нашей пасеки</div>
+    </footer>
+
+    <script>
+    document.getElementById('navToggle').addEventListener('click', function(){
+      document.getElementById('mainNav').classList.toggle('open');
+    });
+    document.getElementById('yearReviews').textContent = new Date().getFullYear();
+
+    // Обработка формы отзыва — клиентская
+    document.getElementById('reviewForm').addEventListener('submit', function(e){
+      e.preventDefault();
+      alert('Спасибо! Ваш отзыв отправлен на модерацию.');
+      this.reset();
+    });
+    </script>
+</body>
+</html>
