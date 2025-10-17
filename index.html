@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -34,24 +34,24 @@
                     </div>
                 </div>
                 <div class="hero-photo">
-                    <img src="images/hero.jpg" alt="Пасека — башкирский мёд">
+                    <img src="images/LetoPa.jpg" alt="Пасека — башкирский мёд">
                 </div>
             </div>
         </section>
 
         <section class="features container">
             <div class="feature">
-                <img src="images/comb.jpg" alt="Соты">
+                <img src="images/SmalSota.jpg" alt="Соты">
                 <h3>100% натурально</h3>
                 <p>Без сахара, без искусственных добавок — только чистый башкирский мёд.</p>
             </div>
             <div class="feature">
-                <img src="images/flowers.jpg" alt="Поля">
+                <img src="images/Pole.jpg" alt="Поля">
                 <h3>Экологично</h3>
                 <p>Пасека расположена в экологически чистом районе Красноусольского.</p>
             </div>
             <div class="feature">
-                <img src="images/honey-jar.jpg" alt="Банка мёда">
+                <img src="images/MedBanki.jpg" alt="Банка мёда">
                 <h3>Разные сорта</h3>
                 <p>Липовый, цветочный, гречишный, сотовый и натуральные продукты пчеловодства.</p>
             </div>
@@ -64,7 +64,7 @@
                     <p>Мы — семья пчеловодов из села Красноусольский. Более 20 лет опыта, традиционный сбор и аккуратная обработка мёда.</p>
                     <a class="btn" href="about.html">Узнать больше</a>
                 </div>
-                <img src="images/bees.jpg" alt="Пчёлы на цветах">
+                <!-- <img src="images/bees.jpg" alt="Пчёлы на цветах"> --><!--  -->
             </div>
         </section>
 
@@ -84,14 +84,14 @@
                 <a class="logo" href="index.html">Мёд с нашей пасеки</a>
                 <p>с. Красноусольский, Республика Башкортостан</p>
             </div>
+
             <div class="footer-contacts">
-                <p>📞 +7 (987) 251-48-66</p>
-                <p>📞 +7 (917) 788-85-84</p>
-                <p>✉️ ivandobrakov25@gmail.com</p>
-                <p>
-                    Вконтакте: https://vk.com/club214044851
-                </p>
+                <p>📞 <a href="tel:+79872514866">+7 (987) 251-48-66</a></p>
+                <p>📞 <a href="tel:+79177888584">+7 (917) 788-85-84</a></p>
+                <p>✉️ <a href="mailto:ivandobrakov25@gmail.com">ivandobrakov25@gmail.com</a></p>
+                <p>🔗 <a href="https://vk.com/club214044851" target="_blank" rel="noopener noreferrer">Вконтакте: vk.com/club214044851</a></p>
             </div>
+
             <div class="footer-links">
                 <a href="products.html">Наш мёд</a>
                 <a href="about.html">О нас</a>
@@ -99,15 +99,23 @@
                 <a href="contacts.html">Контакты</a>
             </div>
         </div>
-        <div class="copyright">© <span id="year"></span> Мёд с нашей пасеки — Все права защищены</div>
+
+        <div class="copyright">
+            © <span id="year"></span> Мёд с нашей пасеки — Все права защищены
+        </div>
     </footer>
 
     <script>
-    // Навигация и год в футере, и простая обработка формы (на других страницах тоже используется)
-    document.getElementById('navToggle').addEventListener('click', function(){
-      document.getElementById('mainNav').classList.toggle('open');
-    });
-    document.getElementById('year').textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+    <script>
+        // Навигация и год в футере, и простая обработка формы (на других страницах тоже используется)
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
-</html>
+    </html>
