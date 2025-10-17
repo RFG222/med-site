@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -22,6 +22,14 @@
         </div>
     </header>
 
+    <main class="container reviews-page">
+        <h1>Страница временно недоступна</h1>
+        <p style="font-size:1.2rem; margin-top:1rem;">
+            Мы обновляем раздел с отзывами. Возвращайтесь чуть позже 🍯
+        </p>
+    </main>
+
+    <!--
     <main class="container reviews-page">
         <h1>Отзывы наших покупателей</h1>
 
@@ -62,6 +70,7 @@
             </form>
         </section>
     </main>
+        -->
 
     <footer class="site-footer">
         <div class="container footer-inner">
@@ -69,11 +78,14 @@
                 <a class="logo" href="index.html">Мёд с нашей пасеки</a>
                 <p>с. Красноусольский, Республика Башкортостан</p>
             </div>
+
             <div class="footer-contacts">
-                <p>📞 +7 (999) 123-45-67</p>
-                <p>✉️ med@pasika.ru</p>
-                <p>Instagram: @med_s_nashey_paseki</p>
+                <p>📞 <a href="tel:+79872514866">+7 (987) 251-48-66</a></p>
+                <p>📞 <a href="tel:+79177888584">+7 (917) 788-85-84</a></p>
+                <p>✉️ <a href="mailto:ivandobrakov25@gmail.com">ivandobrakov25@gmail.com</a></p>
+                <p>🔗 <a href="https://vk.com/club214044851" target="_blank" rel="noopener noreferrer">Вконтакте: vk.com/club214044851</a></p>
             </div>
+
             <div class="footer-links">
                 <a href="products.html">Наш мёд</a>
                 <a href="about.html">О нас</a>
@@ -81,21 +93,29 @@
                 <a href="contacts.html">Контакты</a>
             </div>
         </div>
-        <div class="copyright">© <span id="yearReviews"></span> Мёд с нашей пасеки</div>
+
+        <div class="copyright">
+            © <span id="year"></span> Мёд с нашей пасеки — Все права защищены
+        </div>
     </footer>
 
     <script>
-    document.getElementById('navToggle').addEventListener('click', function(){
-      document.getElementById('mainNav').classList.toggle('open');
-    });
-    document.getElementById('yearReviews').textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 
-    // Обработка формы отзыва — клиентская
-    document.getElementById('reviewForm').addEventListener('submit', function(e){
-      e.preventDefault();
-      alert('Спасибо! Ваш отзыв отправлен на модерацию.');
-      this.reset();
-    });
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+        document.getElementById('yearReviews').textContent = new Date().getFullYear();
+
+        // Обработка формы отзыва — клиентская
+        document.getElementById('reviewForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+            alert('Спасибо! Ваш отзыв отправлен на модерацию.');
+            this.reset();
+        });
     </script>
 </body>
 </html>
