@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -6,6 +6,65 @@
     <title>О нашей пасеке — Мёд с нашей пасеки</title>
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .about-grid {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .about-text {
+            flex: 1 1 50%;
+            font-size: 1.1rem;
+            line-height: 1.6;
+        }
+
+        .about-photo {
+            flex: 1 1 40%;
+            text-align: center;
+        }
+
+            .about-photo img {
+                width: 100%;
+                max-width: 500px;
+                border-radius: 20px;
+                box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+            }
+
+        /* --- Архивная галерея --- */
+        .archive-gallery {
+            border-top: 2px solid #f0c040;
+            padding-top: 2rem;
+        }
+
+            .archive-gallery h2 {
+                text-align: center;
+                margin-bottom: 1.5rem;
+                font-size: 1.8rem;
+                color: #6a4500;
+            }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1rem;
+        }
+
+            .gallery-grid img {
+                width: 100%;
+                height: 180px;
+                object-fit: cover;
+                border-radius: 12px;
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+                .gallery-grid img:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+                }
+    </style>
 </head>
 <body>
     <header class="site-header">
@@ -24,6 +83,7 @@
 
     <main class="container about-page">
         <h1>Наша семья и пасека</h1>
+
         <div class="about-grid">
             <div class="about-text">
                 <p>Пасека нашей семьи находится в селе Красноусольский, Республика Башкортостан. Мы занимаемся пчеловодством более 20 лет: бережно содержим ульи, заботимся о здоровье пчёл и собираем мёд с лугов и лесов Южного Урала.</p>
@@ -36,11 +96,28 @@
                     <li>Мы любим свою работу и хотим делиться вкусом и пользой мёда.</li>
                 </ul>
             </div>
-            <div class="about-photos">
-                <img src="images/bees.jpg" alt="Пчёлы">
-                <img src="images/honey-jar.jpg" alt="Банки мёда">
+
+            <div class="about-photo">
+                <img src="images/Pa.jpg" alt="Наша пасека">
             </div>
         </div>
+
+        <!-- Архивная галерея -->
+        <section class="archive-gallery">
+            <h2>Архивная галерея</h2>
+            <div class="gallery-grid">
+                <img src="images/Pa.jpg" alt="Пасека 2010">
+                <img src="images/LetoPa.jpg" alt="Пасека 2010">
+                <img src="images/ZimaPa.jpg" alt="Семейное фото">
+                <img src="images/PaArhiv.jpg" alt="Сбор мёда">
+                <img src="images/PaArhiv3.jpg" alt="Улей вблизи">
+                <img src="images/PaARHIV2.jpg" alt="Наши пчёлы">
+                <img src="images/Yley.jpg" alt="Банки мёда">
+                <img src="images/BigSota.jpg" alt="Банки мёда">
+                <img src="images/StekayshiyMed.jpg" alt="Банки мёда">
+
+            </div>
+        </section>
     </main>
 
     <footer class="site-footer">
@@ -49,11 +126,14 @@
                 <a class="logo" href="index.html">Мёд с нашей пасеки</a>
                 <p>с. Красноусольский, Республика Башкортостан</p>
             </div>
+
             <div class="footer-contacts">
-                <p>📞 +7 (999) 123-45-67</p>
-                <p>✉️ med@pasika.ru</p>
-                <p>Instagram: @med_s_nashey_paseki</p>
+                <p>📞 <a href="tel:+79872514866">+7 (987) 251-48-66</a></p>
+                <p>📞 <a href="tel:+79177888584">+7 (917) 788-85-84</a></p>
+                <p>✉️ <a href="mailto:ivandobrakov25@gmail.com">ivandobrakov25@gmail.com</a></p>
+                <p>🔗 <a href="https://vk.com/club214044851" target="_blank" rel="noopener noreferrer">Вконтакте: vk.com/club214044851</a></p>
             </div>
+
             <div class="footer-links">
                 <a href="products.html">Наш мёд</a>
                 <a href="about.html">О нас</a>
@@ -61,14 +141,22 @@
                 <a href="contacts.html">Контакты</a>
             </div>
         </div>
-        <div class="copyright">© <span id="yearAbout"></span> Мёд с нашей пасеки</div>
+
+        <div class="copyright">
+            © <span id="year"></span> Мёд с нашей пасеки — Все права защищены
+        </div>
     </footer>
 
     <script>
-    document.getElementById('navToggle').addEventListener('click', function(){
-      document.getElementById('mainNav').classList.toggle('open');
-    });
-    document.getElementById('yearAbout').textContent = new Date().getFullYear();
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+
+    <script>
+        document.getElementById('navToggle').addEventListener('click', function () {
+            document.getElementById('mainNav').classList.toggle('open');
+        });
+        document.getElementById('yearAbout').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
