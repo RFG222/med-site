@@ -1,4 +1,4 @@
-﻿<!doctype html>
+<!doctype html>
 <html lang="ru">
 <head>
     <meta charset="utf-8" />
@@ -26,7 +26,7 @@
         <h1>Наш мёд</h1>
         <section class="products-grid">
             <article class="product-card">
-                <img src="images/honey-linden.jpg" alt="Липовый мёд">
+                <!-- <img src="images/honey-linden.jpg" alt="Липовый мёд"> -->
                 <h3>Липовый мёд</h3>
                 <p class="price">от 500 ₽ / 0.5 кг</p>
                 <p>Золотистый, душистый — отличное средство при простуде и для иммунитета.</p>
@@ -34,7 +34,7 @@
             </article>
 
             <article class="product-card">
-                <img src="images/honey-acacia.jpg" alt="Акациевый мёд">
+                <!-- <img src="images/honey-acacia.jpg" alt="Акациевый мёд"> -->
                 <h3>Акациевый мёд</h3>
                 <p class="price">от 600 ₽ / 0.5 кг</p>
                 <p>Светлый, нежный, не кристаллизуется долгое время — идеально для чая и десертов.</p>
@@ -42,7 +42,7 @@
             </article>
 
             <article class="product-card">
-                <img src="images/honey-buckwheat.jpg" alt="Гречишный мёд">
+                <!-- <img src="images/honey-buckwheat.jpg" alt="Гречишный мёд"> -->
                 <h3>Гречишный мёд</h3>
                 <p class="price">от 450 ₽ / 0.5 кг</p>
                 <p>Тёмный, насыщенный, богат минералами — лучший выбор для здоровья сердца.</p>
@@ -50,7 +50,7 @@
             </article>
 
             <article class="product-card">
-                <img src="images/honey-forest.jpg" alt="Лесной мёд">
+                <!-- <img src="images/honey-forest.jpg" alt="Лесной мёд"> -->
                 <h3>Лесной мёд</h3>
                 <p class="price">от 550 ₽ / 0.5 кг</p>
                 <p>Сбор с разных лесных растений — ароматный, тёмный, полезный при анемии.</p>
@@ -58,7 +58,7 @@
             </article>
 
             <article class="product-card">
-                <img src="images/honey-flower.jpg" alt="Цветочный мёд">
+                <!-- <img src="images/honey-flower.jpg" alt="Цветочный мёд"> -->
                 <h3>Цветочный мёд</h3>
                 <p class="price">от 480 ₽ / 0.5 кг</p>
                 <p>Лёгкий, ароматный, идеальный для детских чаев и утренних тостов.</p>
@@ -73,11 +73,14 @@
                 <a class="logo" href="index.html">Мёд с нашей пасеки</a>
                 <p>с. Красноусольский, Республика Башкортостан</p>
             </div>
+
             <div class="footer-contacts">
-                <p>📞 +7 (999) 123-45-67</p>
-                <p>✉️ med@pasika.ru</p>
-                <p>Instagram: @med_s_nashey_paseki</p>
+                <p>📞 <a href="tel:+79872514866">+7 (987) 251-48-66</a></p>
+                <p>📞 <a href="tel:+79177888584">+7 (917) 788-85-84</a></p>
+                <p>✉️ <a href="mailto:ivandobrakov25@gmail.com">ivandobrakov25@gmail.com</a></p>
+                <p>🔗 <a href="https://vk.com/club214044851" target="_blank" rel="noopener noreferrer">Вконтакте: vk.com/club214044851</a></p>
             </div>
+
             <div class="footer-links">
                 <a href="products.html">Наш мёд</a>
                 <a href="about.html">О нас</a>
@@ -85,8 +88,16 @@
                 <a href="contacts.html">Контакты</a>
             </div>
         </div>
-        <div class="copyright">© <span id="yearProducts"></span> Мёд с нашей пасеки</div>
+
+        <div class="copyright">
+            © <span id="year"></span> Мёд с нашей пасеки — Все права защищены
+        </div>
     </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
 
     <script>
         document.getElementById('navToggle').addEventListener('click', function () {
